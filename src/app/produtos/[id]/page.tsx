@@ -34,7 +34,7 @@ const EditarProdutoPage = () => {
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.put(`/${id}`, produto);
+      await axios.put(`http://localhost:8080/produto/${id}`, produto);
       alert("Produto atualizado com sucesso");
       router.push("/produtos"); // Redireciona para a lista de produtos após a atualização
     } catch (err) {
