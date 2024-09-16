@@ -51,7 +51,7 @@ const CadastroPage = () => {
     e.preventDefault();
     
     try {
-      const response = await axios.post('https://nextiawebapp.azurewebsites.net/cliente', clienteForm);
+      const response = await axios.post('http://localhost:8080/cliente', clienteForm);
       console.log('Cliente cadastrado com sucesso:', response.data);
       setClienteForm({
         nome: '',
@@ -74,7 +74,7 @@ const CadastroPage = () => {
     e.preventDefault();
     
     try {
-      const response = await axios.post('https://nextiawebapp.azurewebsites.net/produto', produtoForm);
+      const response = await axios.post('http://localhost:8080/produto', produtoForm);
       console.log('Produto cadastrado com sucesso:', response.data);
       setProdutoForm({
         nome: '',
