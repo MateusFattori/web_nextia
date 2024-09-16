@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 text-gray-900 font-sans;
+}
+
+
+aside {
+  @apply w-64 bg-gray-900 text-white flex-shrink-0;
+}
+
+aside .menu-title {
+  @apply p-4 text-lg font-semibold;
+}
+
+aside nav a {
+  @apply px-4 py-2 text-gray-300 hover:bg-gray-700 rounded-md block transition;
+}
+
+aside nav a.active {
+  @apply bg-blue-600 text-white;
+}
+
+main {
+  @apply flex-1 p-8 bg-white;
+}
+
+
+h1 {
+  @apply text-3xl font-bold text-gray-800 mb-6;
+}
+
+h2 {
+  @apply text-xl font-semibold text-blue-600 mb-4;
+}
+
+form {
+  @apply grid grid-cols-2 gap-4;
+}
+
+input, select {
+  @apply border border-gray-300 focus:ring focus:ring-blue-200 px-4 py-2 rounded-md;
+}
+
+input::placeholder, select {
+  @apply text-gray-500;
+}
+
+
+button {
+  @apply bg-blue-600 text-white font-semibold px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out;
+}
+
+button.switch {
+  @apply py-2 px-6 font-bold rounded-md transition duration-300 ease-in-out;
+}
+
+button.switch.active {
+  @apply bg-blue-600 text-white;
+}
+
+button.switch.inactive {
+  @apply bg-gray-200 text-gray-700;
+}
+
+
+input[type="checkbox"] {
+  @apply h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500;
+}
+
+table {
+  @apply w-full bg-white shadow-md border border-gray-200 rounded-md mt-4;
+}
+
+th, td {
+  @apply px-4 py-2 text-left border-b;
+}
+
+th {
+  @apply bg-gray-50 text-gray-500;
+}
+
+td {
+  @apply text-gray-900;
+}
+
+.pagination {
+  @apply flex justify-end mt-4;
+}
+
+.pagination ul {
+  @apply flex space-x-2;
+}
+
+.pagination li {
+  @apply px-3 py-1 border rounded-md;
+}
+
+.pagination li.active {
+  @apply bg-gray-200;
+}
