@@ -27,7 +27,7 @@ const EditarClientePage = () => {
   // Função para buscar os dados do cliente com base no ID da URL
   const fetchCliente = async () => {
     try {
-      const response = await axios.get(`https://nextiawebapp.azurewebsites.net/cliente/${id}`); // Requisição para buscar o cliente específico
+      const response = await axios.get(`http://localhost:8080/cliente/${id}`); // Requisição para buscar o cliente específico
       setCliente(response.data); // Atualiza o estado com os dados do cliente
       setLoading(false); // Indica que terminou de carregar
     } catch (err) {
@@ -40,7 +40,7 @@ const EditarClientePage = () => {
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.put(`https://nextiawebapp.azurewebsites.net/cliente/${id}`, cliente); // Atualiza o cliente na API
+      await axios.put(`http://localhost:8080/cliente/${id}`, cliente); // Atualiza o cliente na API
       alert("Cliente atualizado com sucesso");
       router.push("/editar"); // Redireciona para a lista de clientes
     } catch (err) {
